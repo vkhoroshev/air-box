@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import java.net.URL?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="ru.vkhoroshev.Controller"
+      alignment="CENTER" prefWidth="640" prefHeight="480">
+
+    <stylesheets>
+        <URL value="@/ru/vkhoroshev/style.css"/>
+    </stylesheets>
+
+    <HBox VBox.vgrow="ALWAYS">
+        <ListView fx:id="listView" HBox.hgrow="ALWAYS"/>
+    </HBox>
+    <HBox>
+        <TextField fx:id="textField" onAction="#sendMessage" HBox.hgrow="ALWAYS" promptText="Test message"/>
+    </HBox>
+</VBox>
