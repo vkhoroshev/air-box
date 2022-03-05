@@ -16,9 +16,10 @@
     </stylesheets>
 
     <HBox VBox.vgrow="ALWAYS">
-        <ListView fx:id="listView" HBox.hgrow="ALWAYS"/>
+        <ListView fx:id="listView" onMouseClicked="#toCurrentDir" HBox.hgrow="ALWAYS"/>
     </HBox>
     <HBox>
-        <TextField fx:id="textField" onAction="#sendMessage" HBox.hgrow="ALWAYS" promptText="Test message"/>
+        <TextField fx:id="textField" onAction="#sendMessage"
+                   HBox.hgrow="ALWAYS" editable="false" promptText="Test message"/>
     </HBox>
 </VBox>

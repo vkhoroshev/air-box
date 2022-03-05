@@ -15,8 +15,8 @@ public class Main {
                 Socket socket = serverSocket.accept();
                 System.out.println("Client accepted.");
 
-                Handler handler = new Handler(socket);
-                new Thread(handler).start();
+                FileProcessor fileProcessor = new FileProcessor(socket);
+                new Thread(fileProcessor).start();
             }
         } catch (Exception exception) {
             exception.printStackTrace();
